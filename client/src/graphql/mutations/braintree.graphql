@@ -1,0 +1,7 @@
+mutation MakePayment($paymentMethodNonce: String!, $amount: String!) {
+  processPayment(paymentMethodNonce: $paymentMethodNonce, amount: $amount) {
+    errors
+    success
+    transaction
+  }
+}

@@ -1,0 +1,66 @@
+.dashboard {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 24rem repeat(2, 1fr);
+
+  & .sidebar {
+    grid-column: 1/ -1;
+    background: $dark-bg;
+    color: $green;
+
+    & ul {
+      // padding-top: 1rem;
+      & .arrow {
+        height: 50rem;
+        width: 50rem;
+        background: $green;
+      }
+
+      & li {
+        font-weight: 700;
+        padding: 2rem 0 2rem 1.5rem;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.15);
+        cursor: pointer;
+
+        &:hover {
+          background: $green;
+          color: $white;
+          // position: absolute;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      grid-column: 1/2;
+      min-height: 70vh;
+    }
+  }
+
+  & .content {
+    grid-column: 1/-1;
+    margin-top: 2rem;
+
+    & .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & h3 {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 2.4rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      grid-column: 2/-1;
+    }
+  }
+
+  & .footer {
+    grid-column: 1/-1;
+    padding: 1.5rem;
+    // background: $dark-bg;
+    color: $white;
+  }
+}

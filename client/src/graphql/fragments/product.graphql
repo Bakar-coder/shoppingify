@@ -1,0 +1,33 @@
+fragment product on ProductType {
+  id
+  title
+  stock
+  price
+  category
+  discount
+  discountExpiration
+  description
+  tags
+  images
+  featured
+  published
+  user {
+    id
+    firstName
+    lastName
+    username
+    email
+    avatar
+    admin
+    seller
+  }
+}
+
+fragment products on ProductsResponseType {
+  errors {
+    ...error
+  }
+  products {
+    ...product
+  }
+}

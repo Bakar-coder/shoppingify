@@ -1,0 +1,8 @@
+query PaymentToken {
+  getToken {
+    success
+    clientToken
+  }
+}
+
+

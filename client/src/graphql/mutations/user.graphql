@@ -1,0 +1,57 @@
+mutation Register(
+  $firstName: String!
+  $lastName: String!
+  $username: String!
+  $email: String!
+  $password: String!
+  $password2: String!
+  $seller: Boolean
+  $admin: Boolean
+) {
+  register(
+    opts: {
+      firstName: $firstName
+      lastName: $lastName
+      username: $username
+      email: $email
+      password: $password
+      password2: $password2
+      admin: $admin
+      seller: $seller
+    }
+  ) {
+    ...userData
+  }
+}
+
+mutation Login($usernameOrEmail: String!, $password: String!) {
+  login(password: $password, usernameOrEmail: $usernameOrEmail) {
+    ...userData
+  }
+}
+
+mutation Logout {
+  logout
+}
+
+mutation AddToCart($productId: Int!, $quantity: Int!) {
+  addToCart(productId: $productId, quantity: $quantity) {
+    ...userData
+  }
+}
+
+mutation DecrementCartItem($productId: Int!, $quantity: Int!) {
+  decrementCartItem(productId: $productId, quantity: $quantity) {
+    ...userData
+  }
+}
+
+mutation RemoveCartItem($productId: Int!) {
+  removeCartItem(productId: $productId) {
+    ...userData
+  }
+}
+
+mutation ClearCart {
+  clearCart
+}

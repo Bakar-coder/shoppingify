@@ -1,0 +1,17 @@
+query User {
+  user {
+    ...userData
+  }
+}
+
+query GetCart {
+  getCart {
+    ...userData
+  }
+}
+
+query Users {
+  users {
+    ...user
+  }
+}

@@ -1,0 +1,84 @@
+.form {
+  max-width: 70rem;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 3rem;
+  background-color: $white;
+  box-shadow: $shadow;
+  border-radius: 0.8rem;
+
+  & a {
+    color: inherit;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $green;
+    }
+  }
+
+  & textarea {
+    font-family: inherit;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  &__header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    & h3 {
+      font-size: 2.4rem;
+      font-family: $primary-color;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__group {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    color: inherit;
+    background-color: $bg-color;
+    position: relative;
+  }
+
+  & .button__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      & div:last-child {
+        margin-top: 1rem;
+
+        & span {
+          display: block;
+
+          &:first-child {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+
+    & span {
+      font-size: 1.3rem;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

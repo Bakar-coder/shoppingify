@@ -1,0 +1,86 @@
+mutation AddProduct(
+  $title: String!
+  $stock: Int!
+  $price: Float!
+  $category: String!
+  $discount: String
+  $discountExpiration: String
+  $description: String!
+  $tags: String
+  $images: [Upload!]!
+  $featured: Boolean
+  $published: Boolean
+) {
+  addProduct(
+    opts: {
+      title: $title
+      stock: $stock
+      price: $price
+      category: $category
+      discount: $discount
+      discountExpiration: $discountExpiration
+      description: $description
+      tags: $tags
+      images: $images
+      featured: $featured
+      published: $published
+    }
+  ) {
+    errors {
+      ...error
+    }
+    products {
+      ...product
+    }
+  }
+}
+
+mutation UpdateProduct(
+  $id: Int!
+  $title: String!
+  $stock: Int!
+  $price: Float!
+  $category: String!
+  $discount: String
+  $discountExpiration: String
+  $description: String!
+  $tags: String
+  $images: [Upload!]
+  $featured: Boolean
+  $published: Boolean
+) {
+  updateProduct(
+    opts: {
+      id: $id
+      title: $title
+      stock: $stock
+      price: $price
+      category: $category
+      discount: $discount
+      discountExpiration: $discountExpiration
+      description: $description
+      tags: $tags
+      images: $images
+      featured: $featured
+      published: $published
+    }
+  ) {
+    errors {
+      ...error
+    }
+    products {
+      ...product
+    }
+  }
+}
+
+mutation DeleteProduct($id: Int!) {
+  deleteProduct(id: $id) {
+    errors {
+      ...error
+    }
+    products {
+      ...product
+    }
+  }
+}

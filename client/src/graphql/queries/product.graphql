@@ -1,0 +1,27 @@
+query Product($id: Int!) {
+  product(id: $id) {
+    errors {
+      ...error
+    }
+    product {
+      ...product
+    }
+  }
+}
+
+query Products {
+  allProducts {
+    errors {
+      ...error
+    }
+    products {
+      ...product
+    }
+  }
+}
+
+query PaginatedProducts($limit: Int!, $cursor: Int) {
+  paginatedProducts(cursor: $cursor, limit: $limit) {
+    ...products
+  }
+}

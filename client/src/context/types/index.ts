@@ -1,0 +1,13 @@
+export const SET_USER = "SET_USER";
+export const SET_CART_ITEM = "SET_CART_ITEM";
+export const REMOVE_USER = "REMOVE_USER";
+export const SET_LOADING = "SET_LOADING";
+export const SET_LOADED = "SET_LOADED";
+export const SET_ERROR = "SET_ERROR";
+export const REMOVE_ERROR = "REMOVE_ERROR";
+export const SET_ALERT = "SET_ALERT";
+export const REMOVE_ALERT = "REMOVE_ALERT";
+export const SET_INFO = "SET_INFO";
+export const REMOVE_INFO = "REMOVE_INFO";
+export const SET_WARNING = "SET_WARNING";
+export const REMOVE_WARNING = "REMOVE_WARNING";
