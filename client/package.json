@@ -38,6 +38,7 @@
     "react-scroll": "^1.8.2",
     "react-slick": "^0.28.1",
     "sass": "^1.32.8",
+    "slick-carousel": "^1.8.1",
     "urql": "^2.0.1",
     "use-analytics": "^0.0.5"
   },

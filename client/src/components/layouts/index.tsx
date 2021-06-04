@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "~slick-carousel/slick/slick.css"; 
+import "~slick-carousel/slick/slick-theme.css";
 import AppContext from "../../context";
 import Header from "./header";
 import SideNav from "./header/SideNav";
