@@ -5,7 +5,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
-
+RUN yarn add braintree-web-drop-in-react braintree-web
 # Rebuild the source code only when needed
 FROM node:16.2.0-alpine AS builder
 WORKDIR /app
